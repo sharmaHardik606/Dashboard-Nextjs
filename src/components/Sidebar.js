@@ -19,9 +19,9 @@ export default function Sidebar() {
 
 
   return (
-    <>
-      {/* Mobile Hamburger Menu - Only visible on mobile */}
-      <div className="lg:hidden absolute top-5 left-4 z-50">
+    <div className="lg:border-r-1 lg:border-gray-300">
+      
+      <div className="lg:hidden absolute top-5 left-4 z-50 ">
         <button onClick={() => setIsOpen(true)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-black">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
@@ -33,7 +33,7 @@ export default function Sidebar() {
       <aside
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 transform transition-transform duration-300 ease-in-out fixed lg:static top-0 left-0 w-64 h-screen bg-white shadow-md p-6 z-40`}
+        } lg:translate-x-0 transform transition-transform duration-300 ease-in-out fixed lg:static top-0 left-0 w-52 h-full bg-white  p-6 z-40`}
       >
         {/* Close Button for mobile */}
         <div className="flex justify-end mb-6 lg:hidden ">
@@ -57,7 +57,7 @@ export default function Sidebar() {
           </Link>
         </nav>
       </aside>
-    </>
+    </div>
   );
 }
 

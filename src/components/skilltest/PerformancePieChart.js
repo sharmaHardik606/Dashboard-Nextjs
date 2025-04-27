@@ -2,7 +2,7 @@
 
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-const COLORS = ["#4CAF50", "#F44336", "#FF9800"]; // Correct - Green, Incorrect - Red, Skipped - Orange
+const COLORS = ["#1447E6", "#00BFFF", "#87CEEB"]; // Correct - Green, Incorrect - Red, Skipped - Orange
 
 export default function PerformancePieChart({ scoreData }) {
   const data = [
@@ -15,8 +15,8 @@ export default function PerformancePieChart({ scoreData }) {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
-      <h2 className="text-xl font-semibold mb-4 text-center">
-        🎉 Congratulations! You answered {scoreData.correct} out of {totalQuestions} questions correctly. Keep pushing for better results!
+      <h2 className="text-lg font-semibold mb-4 text-center">
+        You answered {scoreData.correct} out of {totalQuestions} questions correctly. Keep pushing for better results!
       </h2>
 
       <PieChart width={300} height={300}>
