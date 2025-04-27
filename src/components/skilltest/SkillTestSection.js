@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
-
-import ScoreForm from "./ScoreForm";
-import SkillTestCard from "../SkillTestCard";
-import QuickStatistics from "../QuickStatistics";
-import PerformancePieChart from "./PerformancePieChart"; // ADD this
+import QuickStatistics from "./QuickStatistics";
+import PerformancePieChart from "./PerformancePieChart"; 
 import SyllabusAnalysis from "./SyllabusAnalysis";
+import SkillTestCard from "./SkillTestCard";
+import ScoreForm from "./ScoreForm";
 
 
 
 export default function SkillTestSection() {
-  const [showForm, setShowForm] = useState(false);
- 
+  const [showForm, setShowForm] = useState(false); 
+  
   const [scoreData, setScoreData] = useState({
     correct: 10,
     incorrect: 2,
@@ -22,7 +21,8 @@ export default function SkillTestSection() {
     attempted: 15,
   });
   
-
+  console.log(showForm);  // Check if showForm is true
+  console.log(scoreData); 
   return (
     <div className="w-full flex flex-wrap lg:flex-nowrap gap-8">
   {/* Left Side */}
@@ -38,11 +38,11 @@ export default function SkillTestSection() {
 
     {showForm && (
       <ScoreForm
-        scoreData={scoreData}
-        setScoreData={setScoreData}
-        onCancel={() => setShowForm(false)}
-        onSave={() => setShowForm(false)}
-      />
+      scoreData={scoreData}
+      setScoreData={setScoreData}
+      onCancel={() => setShowForm(false)}
+      onSave={() => setShowForm(false)}
+    />
     )}
   </div>
 

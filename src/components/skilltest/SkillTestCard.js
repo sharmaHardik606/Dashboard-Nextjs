@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import ScoreForm from "./skilltest/ScoreForm";
+import ScoreForm from "./ScoreForm";
+
 
 export default function SkillTestCard({ scoreData, setScoreData }) {
   const [showModal, setShowModal] = useState(false);
