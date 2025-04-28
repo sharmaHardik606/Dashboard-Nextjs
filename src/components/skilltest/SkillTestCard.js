@@ -1,8 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import ScoreForm from "./ScoreForm";
-
 
 export default function SkillTestCard({ scoreData, setScoreData }) {
   const [showModal, setShowModal] = useState(false);
@@ -12,14 +12,17 @@ export default function SkillTestCard({ scoreData, setScoreData }) {
       <div className="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
         {/* Left side */}
         <div className="flex items-center gap-4">
-          <Image src="/public/html.jpg" alt="HTML5 Logo" className="w-12 h-12" 
-          width={40}
-          height={40}
+          <Image
+            src="/html.jpg"
+            alt="HTML5 Logo"
+            width={40}
+            height={40}
+            className="w-12 h-12 object-contain"
           />
           <div>
             <h2 className="text-xl font-bold">Hyper Text Markup Language</h2>
             <p className="text-gray-500 text-sm">
-              Questions: 08 | Duration: 15 mins | Submitted on 27 april 2025
+              Questions: 15 | Duration: 15 mins | Submitted on 27 April 2025
             </p>
           </div>
         </div>
@@ -72,3 +75,4 @@ export default function SkillTestCard({ scoreData, setScoreData }) {
     </>
   );
 }
+

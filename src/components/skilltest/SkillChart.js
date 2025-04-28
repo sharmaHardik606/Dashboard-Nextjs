@@ -4,7 +4,7 @@ import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
 const COLORS = ["#4CAF50", "#F44336", "#FFC107"]; // Green, Red, Yellow
 
-export default function SkillChart({ scoreData }) {
+export default function SkillChart({ scoreData, setScoreData }) {
   const data = [
     { name: "Correct", value: scoreData.correct },
     { name: "Incorrect", value: scoreData.incorrect },

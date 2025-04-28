@@ -1,13 +1,19 @@
 "use client";
 
-export default function ScoreForm({ scoreData, setScoreData }) {
+export default function ScoreForm({ scoreData, setScoreData, onCancel, onSave }) {
+
   function handleChange(e) {
     const { name, value } = e.target;
-    setScoreData((prev) => ({
-      ...prev,
-      [name]: Number(value),
-    }));
+    if (typeof setScoreData === "function") {
+      setScoreData((prev) => ({
+        ...prev,
+        [name]: Number(value),
+      }));
+    } else {
+      console.error("setScoreData is missing!");
+    }
   }
+  
 
   return (
     <form className="grid grid-cols-1 md:grid-cols-3 gap-4">

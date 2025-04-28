@@ -2,16 +2,15 @@
 
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-const COLORS = ["#1447E6", "#00BFFF", "#87CEEB"]; // Correct - Green, Incorrect - Red, Skipped - Orange
+const COLORS = ["#1447E6", "#00BFFF", "#87CEEB"]; 
 
-export default function PerformancePieChart({ scoreData }) {
+export default function PerformancePieChart({ scoreData,}) {
   const data = [
     { name: "Correct", value: scoreData.correct },
     { name: "Incorrect", value: scoreData.incorrect },
-    { name: "Skipped", value: scoreData.skipped },
   ];
 
-  const totalQuestions = scoreData.correct + scoreData.incorrect + scoreData.skipped;
+  const totalQuestions = scoreData.correct + scoreData.incorrect;
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
