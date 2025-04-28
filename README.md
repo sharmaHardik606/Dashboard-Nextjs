@@ -18,7 +18,7 @@ React Icons
 How to Run Locally:
 
 1. git clone https://github.com/sharmaHardik606/Dashboard-Nextjs.git
-2. cd <project-folder>
+2. cd Dashboard-Nextjs
 3. npm install
 4. npm run dev
 
