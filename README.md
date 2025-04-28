@@ -10,9 +10,9 @@ Built using Next.js, React, Recharts, Tailwind and React Icons!
 5. Responsive and clean UI with Tailwind CSS.
 
 **Tech Stack:**
-Next.js (React framework)
-Tailwind CSS
-Recharts (for graphs)
+Next.js (React framework),
+Tailwind CSS,
+Recharts (for graphs),
 React Icons
 
 How to Run Locally:
