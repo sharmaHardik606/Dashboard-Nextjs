@@ -2,21 +2,23 @@
 
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
-const COLORS = ["#1447E6", "#00BFFF", "#87CEEB"]; 
+const COLORS = ["#1447E6", "#87CEEB"]; 
 
-export default function PerformancePieChart({ scoreData,}) {
+export default function PerformancePieChart({ scoreData }) {
+  const totalQuestions = 15; 
+  const correct = scoreData.correct;
+  const incorrect = totalQuestions - correct;
+
   const data = [
-    { name: "Correct", value: scoreData.correct },
-    { name: "Incorrect", value: scoreData.incorrect },
+    { name: "Correct", value: correct },
+    { name: "Incorrect", value: incorrect },
   ];
-
-  const totalQuestions = scoreData.correct + scoreData.incorrect;
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
       <h1 className="text-2xl font-bold mb-4 text-center self-start">Question Analysis</h1>
       <h2 className="text-md md:text-lg font-semibold mb-4 text-center">
-        You answered {scoreData.correct} out of {totalQuestions} questions correctly. Keep pushing for better results!
+        You answered {correct} out of {totalQuestions} questions correctly. Keep pushing for better results!
       </h2>
 
       <PieChart width={300} height={300}>
@@ -30,7 +32,7 @@ export default function PerformancePieChart({ scoreData,}) {
           label
         >
           {data.map((_, index) => (
-            <Cell key={`cell-${index}`} fill={COLORS[index]} />
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
         <Tooltip />
@@ -39,3 +41,4 @@ export default function PerformancePieChart({ scoreData,}) {
     </div>
   );
 }
+

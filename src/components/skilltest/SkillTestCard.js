@@ -10,7 +10,6 @@ export default function SkillTestCard({ scoreData, setScoreData }) {
   return (
     <>
       <div className="bg-white p-6 rounded-lg shadow-md flex md:justify-between items-center flex-wrap justify-center md:flex-nowrap">
-        {/* Left side */}
         <div className="flex items-center gap-4">
           <Image
             src="/html.jpg"
@@ -22,7 +21,7 @@ export default function SkillTestCard({ scoreData, setScoreData }) {
           <div>
             <h2 className="text-sm md:text-xl font-bold">Hyper Text Markup Language</h2>
             <p className="text-gray-500 text-sm">
-              Questions: 15 | Duration: 15 mins | Submitted on 27 April 2025
+              Questions: 15 | Duration: 15 mins | Submitted on 28 April 2025  {/* i wanted to add a date method to it but i thought its fine */}
             </p>
           </div>
         </div>

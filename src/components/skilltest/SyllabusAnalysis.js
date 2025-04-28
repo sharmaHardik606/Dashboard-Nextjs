@@ -5,7 +5,6 @@ export default function SyllabusAnalysis() {
     { name: "Arrays", progress: 80 },
     { name: "Functions", progress: 65 },
     { name: "Objects", progress: 50 },
-    { name: "Promises", progress: 40 },
     { name: "CSS Grid", progress: 70 },
     { name: "Flexbox", progress: 90 },
   ];
