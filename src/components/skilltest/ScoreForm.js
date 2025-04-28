@@ -1,6 +1,6 @@
 "use client";
 
-export default function ScoreForm({ scoreData, setScoreData, onCancel, onSave }) {
+export default function ScoreForm({ scoreData, setScoreData,}) {
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -29,18 +29,6 @@ export default function ScoreForm({ scoreData, setScoreData, onCancel, onSave })
         />
       </div>
 
-      {/* Score */}
-      <div className="flex flex-col">
-        <label className="mb-2 font-medium">Score</label>
-        <input
-          type="number"
-          name="score"
-          value={scoreData?.score ?? ""} 
-          onChange={handleChange}
-          className="border border-gray-300 rounded p-2"
-        />
-      </div>
-
       {/* Percentile */}
       <div className="flex flex-col">
         <label className="mb-2 font-medium">Percentile</label>
@@ -48,6 +36,18 @@ export default function ScoreForm({ scoreData, setScoreData, onCancel, onSave })
           type="number"
           name="percentile"
           value={scoreData?.percentile ?? ""} 
+          onChange={handleChange}
+          className="border border-gray-300 rounded p-2"
+        />
+      </div>
+
+         {/* Score */}
+         <div className="flex flex-col">
+        <label className="mb-2 font-medium">Score</label>
+        <input
+          type="number"
+          name="score"
+          value={scoreData?.correct ?? ""} 
           onChange={handleChange}
           className="border border-gray-300 rounded p-2"
         />

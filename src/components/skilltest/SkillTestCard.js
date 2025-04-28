@@ -9,7 +9,7 @@ export default function SkillTestCard({ scoreData, setScoreData }) {
 
   return (
     <>
-      <div className="bg-white p-6 rounded-lg shadow-md flex justify-between items-center">
+      <div className="bg-white p-6 rounded-lg shadow-md flex md:justify-between items-center flex-wrap justify-center md:flex-nowrap">
         {/* Left side */}
         <div className="flex items-center gap-4">
           <Image
@@ -20,7 +20,7 @@ export default function SkillTestCard({ scoreData, setScoreData }) {
             className="w-12 h-12 object-contain"
           />
           <div>
-            <h2 className="text-xl font-bold">Hyper Text Markup Language</h2>
+            <h2 className="text-sm md:text-xl font-bold">Hyper Text Markup Language</h2>
             <p className="text-gray-500 text-sm">
               Questions: 15 | Duration: 15 mins | Submitted on 27 April 2025
             </p>
