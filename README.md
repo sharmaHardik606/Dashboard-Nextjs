@@ -23,8 +23,7 @@ How to Run Locally:
 4. npm run dev
 
 **Screenshots:**
-<img width="947" alt="Screenshot 2025-06-08 214434" src="https://github.com/user-attach
-ments/assets/4675a706-3a4a-4944-83f1-84fafd641b92" />
+<img width="947" alt="Screenshot 2025-06-08 214434" src="https://github.com/user-attachments/assets/4675a706-3a4a-4944-83f1-84fafd641b92" />
 <img width="949" alt="Screenshot 2025-06-08 214505" src="https://github.com/user-attachments/assets/593591be-b91f-4d47-8aa4-988f8fa1705a" />
 
 
