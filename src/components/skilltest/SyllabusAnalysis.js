@@ -18,7 +18,7 @@ export default function SyllabusAnalysis() {
             <p className="font-semibold text-gray-700 mb-2">{topic.name}</p>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div
-                className="bg-blue-500 h-2 rounded-full"
+                className="bg-blue-700 h-2 rounded-full"
                 style={{ width: `${topic.progress}%` }}
               ></div>
             </div>
